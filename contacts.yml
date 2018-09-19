@@ -1,0 +1,31 @@
+---
+- !ruby/object:Contact
+  phone_numbers:
+  - !ruby/object:PhoneNumber
+    kind: Home
+    number: 123 321 231
+  addresses:
+  - !ruby/object:Address
+    kind: Home
+    street_1: Main
+    street_2: Second 1
+    city: Lviv
+    state: UK
+    postal_code: '80808'
+  first_name: Valentin
+  last_name: Steblyk
+- !ruby/object:Contact
+  phone_numbers:
+  - !ruby/object:PhoneNumber
+    kind: work
+    number: 456 654 546
+  addresses:
+  - !ruby/object:Address
+    kind: work
+    street_1: lviv
+    street_2: new
+    city: Lviv
+    state: UK
+    postal_code: '80808'
+  first_name: Paul
+  last_name: SHvor
