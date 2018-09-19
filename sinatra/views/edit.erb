@@ -1,0 +1,16 @@
+<h1>Page edit: <%= @title %>.</h1>
+
+<div>
+  <form method="POST" action="/<%= @title %>">
+    <input type="hidden" name="_method" value="put">
+    <fieldset>
+      <label for="content">Content: </label>
+      <textarea name="content" id="content" cols="50" rows="10">itital text</textarea>
+    </fieldset>
+    <input type="submit">
+  </form>
+</div>
+
+<a href="/">Back to index</a>
+
+<%# method="POST" action="/create" %>
