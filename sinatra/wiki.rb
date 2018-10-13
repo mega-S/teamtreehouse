@@ -49,6 +49,6 @@ put "/:title" do
 end
 
 delete "/:title" do
-  delete_file("#{params[:title]}")
+  delete_file("#{params[:title]}"+".txt")
   redirect "/"
 end
