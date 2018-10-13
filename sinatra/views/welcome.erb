@@ -2,5 +2,15 @@
   <h1>Welcome to our Wiki!</h1>
 
   <p>Vasir /PageName to view a page.</p>
+
+  <h3> Task List </h3>
+
+  <ul>
+
+    <% Dir.new("pages").each do |page| %>
+      <% page = File.basename("#{page}", ".*") %>
+      <li> <a href="/<%=page%>"> <%=page %> </a> </li>
+    <% end %>
+  </ul>
   
   <p>Or, you can <a href="/new">create a new page</a></p>

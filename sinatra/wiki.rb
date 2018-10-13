@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'uri'
+require 'find'
 
 def page_content(title)
   File.read("pages/#{title}.txt")
@@ -13,7 +14,7 @@ def save_content(title, content)
   end
 end
 
-def delete_content(title)
+def delete_file(title)
   File.delete("pages/#{title}.txt")
 end
 
@@ -48,6 +49,6 @@ put "/:title" do
 end
 
 delete "/:title" do
-  delete_content(params[:title])
+  delete_file("#{params[:title]}")
   redirect "/"
 end
