@@ -1,15 +1,16 @@
+  <h1>Welcome to my simple notebook Sinatra project!</h1>
 
-  <h1>Welcome to our Wiki!</h1>
+  <p>Select a note to view</p>
 
-  <p>Vasir /PageName to view a page.</p>
+  <h3> Note List </h3>
 
-  <h3> Task List </h3>
-
-  <ul>
+  <ul class="note_list">
 
     <% Dir.new("pages").each do |page| %>
       <% page = File.basename("#{page}", ".*") %>
-      <li> <a href="/<%=page%>"> <%=page %> </a> </li>
+      <% if /^\w/.match(page) %>
+        <li> <a href="/<%=page%>"> <%=page %> </a> </li>
+      <% end %>
     <% end %>
   </ul>
   

@@ -1,11 +1,13 @@
 <h1><%= @title %> </h1>
 
 <p><%= @content %> </p>
+<p><%= File.ctime("pages/#{@title}.txt") %> </p>
 
 <div>
+  <a href="/">Back to Main page</a>
   <a href="/<%= @title %>/edit">Edit this page </a>
   <form method="POST">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete this page">
+    <input type="submit" value="Delete this page" id="delete_button">
   </form>
 </div>
